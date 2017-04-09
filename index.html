@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>計算</title>
+</head>
+<body>
+<p><input type="number" name="num1" value="0"></p>
+<p><input type="number" name="num2" value="0"></p>
+<p>
+<button id="plus">足し算</button>
+</p>
+<p id="answer"></p>
+<script src="jquery-3.2.0.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#plus").click(function(){
+	var num1 = parseInt($("input[name='num1']").val());
+	var num2 = parseInt($("input[name='num2']").val());
+	var answer = num1 + num2;
+	$("#answer").text(num1 + " + " + num2 + " = " + answer);
+});
+});
+</script>
+</body>
+</html>
